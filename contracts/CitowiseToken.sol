@@ -11,7 +11,7 @@ import "./BurnableToken.sol";
  * @title Basic token
  * @dev Basic version of StandardToken, with no allowances.
  */
-contract CitowiseToken is StandardToken, Ownable, BurnableToken, MintableToken, CappedToken {
+contract CitowiseToken is StandardToken, Ownable, MintableToken, BurnableToken, CappedToken {
 
     string public name;
     string public symbol;

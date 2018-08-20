@@ -1,5 +1,5 @@
 {
-  "name": "CTWToken",
+  "name": "CitowiseStorage",
   "version": "1.0.0",
   "description": "",
   "main": "truffle-config.js",
@@ -16,7 +16,6 @@
     "chai": "^4.1.2",
     "chai-bignumber": "^2.0.2",
     "openzeppelin-solidity": "git://github.com:OpenZeppelin/openzeppelin-solidity.git#7618b91",
-    "truffle": "4.1.13",
-    "web3-utils": "^1.0.0-beta.34"
+    "truffle": "4.1.13"
   }
 }
