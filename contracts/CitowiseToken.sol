@@ -2,15 +2,16 @@ pragma solidity ^0.4.24;
 
 import "openzeppelin-solidity/contracts/ownership/Ownable.sol";
 import "openzeppelin-solidity/contracts/token/ERC20/StandardToken.sol";
+import "openzeppelin-solidity/contracts/token/ERC20/MintableToken.sol";
 import "openzeppelin-solidity/contracts/token/ERC20/CappedToken.sol";
-import "openzeppelin-solidity/contracts/token/ERC20/BurnableToken.sol";
+import "./BurnableToken.sol";
 
 
 /**
  * @title Basic token
  * @dev Basic version of StandardToken, with no allowances.
  */
-contract CitowiseToken is StandardToken, Ownable, CappedToken, BurnableToken {
+contract CitowiseToken is StandardToken, Ownable, BurnableToken, MintableToken, CappedToken {
 
     string public name;
     string public symbol;
@@ -21,4 +22,9 @@ contract CitowiseToken is StandardToken, Ownable, CappedToken, BurnableToken {
         symbol = "CTW";
         decimals = 18;
     }
+
+    function burn(address _who, uint256 _value) public onlyOwner() canMint() {
+        _burn(_who, _value);
+    }
+
 }

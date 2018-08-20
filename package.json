@@ -13,7 +13,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "chai": "^4.1.2",
+    "chai-bignumber": "^2.0.2",
+    "openzeppelin-solidity": "git://github.com:OpenZeppelin/openzeppelin-solidity.git#7618b91",
     "truffle": "4.1.13",
-    "openzeppelin-solidity": "1.12.0"
+    "web3-utils": "^1.0.0-beta.34"
   }
 }
