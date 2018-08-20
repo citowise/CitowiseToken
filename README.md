@@ -1,4 +1,8 @@
-# Prepare for testing
+# Description
+
+This is a Citowise Token smart contract. It relays heavily on [OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-solidity/tree/master/contracts/token/ERC20) source codes. For testing and compiling purposes it uses Ganache and Truffle. 
+
+## Prepare for testing
 
 * Install Truffle.js
 
@@ -12,9 +16,13 @@
 
     truffle compile
 
-* And
+* Then
 
     truffle migrate
+
+* Finally run test
+
+    truffle test
 
 ## Tutorials and accompined materials
 
