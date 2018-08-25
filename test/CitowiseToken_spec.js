@@ -21,7 +21,7 @@ contract("CitowiseToken", accounts => {
     it('allows creater to mint', async function () {
       const result = await this.token.mint(
         "0x0123456789012345678901234567890123456789",
-        "100",
+        "100000000000000000000000",
         { from: this.owner }
       );
 
@@ -33,7 +33,7 @@ contract("CitowiseToken", accounts => {
 
       await assertRevert(this.token.mint(
         "0x0123456789012345678901234567890123456789",
-        "100",
+        "100000000000000000000000",
         { from: unallowedMinter }
       ));
     });
@@ -46,7 +46,7 @@ contract("CitowiseToken", accounts => {
       it('does not allow creator to mint', async function () {
         await assertRevert(this.token.mint(
           "0x0123456789012345678901234567890123456789",
-          "100",
+          "100000000000000000000000",
           { from: this.owner }
         ));
       })

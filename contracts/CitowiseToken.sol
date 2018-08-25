@@ -17,7 +17,10 @@ contract CitowiseToken is StandardToken, Ownable, MintableToken, BurnableToken, 
     string public symbol;
     uint8 public decimals;
 
-    constructor() public CappedToken(500000000) {
+    uint256 constant public TOKENS_CAP = 500000000;
+    uint256 constant public ETHER = 1000000000000000000;
+
+    constructor() public CappedToken(TOKENS_CAP * ETHER) {
         name = "Citowise Token";
         symbol = "CTW";
         decimals = 18;
